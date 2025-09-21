@@ -210,7 +210,7 @@
       formHolder.appendChild(diabLabel);
       formHolder.appendChild(diabSel);
 
-      // FIXED: Health Insurance Premium Calculation
+      // Health Insurance Premium Calculation
       function calcHealthPremium(age, k1, k2, k3) {
         const P = 2_000_000; // base premium per year
         let m = 0;
@@ -278,11 +278,11 @@
       }
 
     } else if (product.category && product.category.toLowerCase() === 'life') {
-      /* === LIFE INSURANCE FORM - FIXED === */
+      /* === LIFE INSURANCE FORM === */
       const nama = createInput('pu-nama', 'Full Name (as per ID card)');
       const birthDate = createInput('pu-birthdate', 'Date of Birth', '', 'date');
 
-      // FIXED: Use predefined coverage amounts as required
+      // Use predefined coverage amounts as required
       const coverageLabel = document.createElement('label');
       coverageLabel.className = 'mt';
       coverageLabel.textContent = 'Coverage Amount';
@@ -309,7 +309,7 @@
       formHolder.appendChild(coverageLabel);
       formHolder.appendChild(coverageSel);
 
-      // FIXED: Life Insurance Premium Calculation per assignment specs
+      // Life Insurance Premium Calculation per assignment specs
       function calcLifePremium(age, sumInsured) {
         let tariffRate = 0;
         
