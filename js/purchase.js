@@ -6,6 +6,22 @@
     const formHolder = document.getElementById('form-purchase');
     const msgHolder = document.getElementById('purchase-msg');
 
+    const currentUser = utils.getCurrent();
+    if (!currentUser) {
+      if (formHolder) {
+        utils.clearChildren(formHolder);
+        const loginRequired = document.createElement('div');
+        loginRequired.className = 'error';
+        loginRequired.innerHTML = `
+          <h3>Login Required</h3>
+          <p>You must be logged in to purchase insurance products.</p>
+          <p><a href="login.html" style="color: red; text-decoration: underline;">Click here to login</a></p>
+        `;
+        formHolder.appendChild(loginRequired);
+      }
+      return;
+    }
+
     function showMessage(container, text, type) {
       if (!container) return;
       utils.clearChildren(container);
