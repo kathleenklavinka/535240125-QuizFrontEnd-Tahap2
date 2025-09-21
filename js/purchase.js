@@ -70,7 +70,7 @@
     formHolder.appendChild(resWrap);
 
     if (product.category && product.category.toLowerCase() === 'car') {
-      /* === CAR INSURANCE FORM === */
+      /* CAR INSURANCE FORM */
       const merk = createInput('pu-merk', 'Car Brand', 'Example: Toyota');
       const jenis = createInput('pu-jenis', 'Car Model', 'Example: Avanza');
       const tahun = createInput('pu-tahun', 'Manufacture Year', 'Example: 2019', 'number');
@@ -177,7 +177,7 @@
       }
 
     } else if (product.category && product.category.toLowerCase() === 'health') {
-      /* === HEALTH INSURANCE FORM === */
+      /* HEALTH INSURANCE FORM  */
       const fullName = createInput('pu-fullname', 'Full Name (as per ID card)');
       const birthDate = createInput('pu-birthdate', 'Date of Birth', '', 'date');
       const job = createInput('pu-job', 'Occupation');
@@ -237,7 +237,7 @@
         else if (age <= 50) m = 0.25;
         else m = 0.4;
 
-        // CORRECTED FORMULA: k3 * 0.5 * P (not k3 + 0.5 * P)
+        // Formula from the PDF: k3 * 0.5 * P (not k3 + 0.5 * P)
         return P + (m * P) + (k1 * 0.5 * P) + (k2 * 0.4 * P) + (k3 * 0.5 * P);
       }
 
@@ -296,7 +296,7 @@
       }
 
     } else if (product.category && product.category.toLowerCase() === 'life') {
-      /* === LIFE INSURANCE FORM === */
+      /* LIFE INSURANCE FORM */
       const nama = createInput('pu-nama', 'Full Name (as per ID card)');
       const birthDate = createInput('pu-birthdate', 'Date of Birth', '', 'date');
 
@@ -308,7 +308,6 @@
       coverageSel.className = 'input';
       coverageSel.id = 'pu-coverage';
       
-      // Predefined amounts as per assignment
       const coverageAmounts = [
         { value: 1000000000, text: 'Rp 1.000.000.000' },
         { value: 2000000000, text: 'Rp 2.000.000.000' },
@@ -327,7 +326,7 @@
       formHolder.appendChild(coverageLabel);
       formHolder.appendChild(coverageSel);
 
-      // Life Insurance Premium Calculation per assignment specs
+      // Life Insurance Premium Calculation
       function calcLifePremium(age, sumInsured) {
         let tariffRate = 0;
         
@@ -339,7 +338,7 @@
           tariffRate = 0.01;  // 1%
         }
         
-        // Monthly premium = tariff rate × sum insured
+        // Monthly premium = tariff rate x sum 
         return tariffRate * sumInsured;
       }
 
@@ -382,7 +381,7 @@
             birthDate: birthDate.value,
             age: age,
             sumInsured: sumInsured,
-            premi: Math.round(monthlyPremium) // Monthly premium
+            premi: Math.round(monthlyPremium) // Monthly premium, not YEARLY
           });
           
           showMessage(resWrap, 'Calculation complete. Press "Buy & Checkout" to continue.', 'success');
