@@ -90,6 +90,7 @@
 })();
 
 // Hero slider functionality
+// For the homepage part
 const slides = document.querySelectorAll('.hero-slider .slide');
 const prevBtn = document.querySelector('.hero-slider .prev');
 const nextBtn = document.querySelector('.hero-slider .next');
