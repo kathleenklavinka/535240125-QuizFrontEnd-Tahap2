@@ -1,5 +1,6 @@
 // Flow: You can only checkout after you press the calculate button.
-// So the system will calculate first based on the formula on the PDF
+// So the system will calculate first based on the formula on the PDF.
+// Note, you can't press the buy button without calculating the price first!
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
     const utils = window.KI.utils;
