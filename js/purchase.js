@@ -479,14 +479,8 @@
         const cur = window.KI.utils.getCurrent();
         
         if (!cur) {
-          const tempUser = {
-            id: 'temp_' + Date.now(),
-            name: 'Test User',
-            email: 'test@example.com'
-          };
-          window.KI.utils.setCurrent(tempUser);
-          showMessage(msgHolder, 'All data complete! Temporary user created for testing.', 'success');
-          processPurchase(tempUser);
+          showMessage(msgHolder, 'Session expired. Please login to continue.', 'error');
+          setTimeout(() => window.location.href = 'login.html', 2000);
           return;
         }
         
