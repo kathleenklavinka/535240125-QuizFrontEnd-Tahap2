@@ -1,0 +1,920 @@
+/* 1. STYLES FOR INDEX.HTML (HOME) */
+/* General and Reset for Home */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e6f3ff 0%, #f0f9ff 100%);;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #004080;
+  text-decoration: none;
+}
+a:hover {  
+  text-decoration: underline;  
+}
+
+.container {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Top Bar */
+.topbar {
+  background: #003366;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar .logo {
+  background: #fff;
+  color: #003366;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.topbar .small { font-size: 13px; }
+
+.brand-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.topbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.phone-icon {
+  font-size: 16px;
+}
+
+.topbar-contact a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.topbar-contact span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.topbar-contact strong {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* Navigation Bar (Navbar) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-link {
+  margin: 0 12px;
+  font-weight: 500;
+}
+.nav-link:hover {  
+  color: #007bff;  
+}
+
+#nav-auth .btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+}
+#nav-auth .btn:hover {
+  background: #0056b3;
+}
+
+/* Hero */
+.hero {
+  background: url('/pics/bgblue.jpg') no-repeat center/cover;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.searchbar {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.searchbar input {
+  padding: 10px 30px;
+  width: 400px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.searchbar button {
+  padding: 10px 18px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.searchbar button:hover {  
+  background: #0056b3;  
+}
+
+/* Hero Slider for the Images */
+.hero-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 30px auto 0 auto;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 5px 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 600px;
+  display: none;
+}
+
+.slide.active {
+  min-width: 100%;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 200%;
+}
+.slider-btn:hover {  
+  background: black;  
+}
+
+.slider-btn.prev {  
+  left: 10px;  
+}
+
+.slider-btn.next {  
+  right: 10px;  
+}
+
+/* Sections of the Products */
+#products {  
+  background: linear-gradient(135deg, #e6f3ff 0%, #f0f9ff 100%);  
+  padding: 60px 30px;  
+  border-radius: 12px;  
+}
+
+.section {
+  padding: 50px 0;
+}
+.section .title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section h1 {
+  font-size: 50px;
+  color: #003366;
+}
+.section .small {
+  color: #666;
+  font-size: 17px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.helper {  
+  font-size: 14px; color: #666;  
+}
+
+/* Stats */
+.stats {
+  background: linear-gradient(135deg, #003366, #00509e);
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.stats .container {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.stat {
+  flex: 1 1 200px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.stat h3 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #ffcc00;
+}
+
+.stat p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* About Us (Why Choose Kat's Insurance?) */
+#about {
+  padding: 60px 40px;
+}
+
+#about .title h2 {
+  font-size: 40px;
+  color:#004080;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+#about .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+#about h3 {
+  color: #0066cc;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+#about p.helper {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-left: 4px solid #3399ff;
+}
+
+#about img {
+  width: 100%;
+  max-width: 480px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0,123,255,0.2);
+  margin: auto;
+  display: block;
+  padding: 7px;
+}
+#about img:hover {  
+  transform: scale(1.03);  
+}
+
+/* Boxes in the About Us */
+.feature-list {  
+  margin-top: 20px;  
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.feature-item .badge {
+  background: linear-gradient(135deg, #3399ff, #007bff);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+}
+
+/* Buttons Modifications (Hover Effect) on Home */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #3399ff, #007bff);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+}
+.btn.primary:hover {
+  background: linear-gradient(135deg, #007bff, #3399ff);
+  transform: scale(1.05);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+.btn.ghost:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background: #003366;
+  color: #fff;
+  padding: 50px 0 20px;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.footer-links h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter */
+.footer-newsletter h4 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.footer-newsletter p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.footer-newsletter input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.footer-newsletter button {
+  align-self: flex-start;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #007bff, #33a1fd);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.footer-newsletter button:hover {
+  background: linear-gradient(90deg, #0066cc, #1d8cf8);
+}
+
+/* Checkbox newsletter */
+.newsletter-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.newsletter-check input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+/* Bottom of the Footer */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin: 0 5px;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom p {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ==========================================================================  */
+/* 2. STYLES FOR LOGIN AND SIGNUP */
+
+body#page-login, body#page-signup {
+  background: linear-gradient(135deg, #f4f9ff, #e6f0fa);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+}
+
+main.container .card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0;      
+}
+
+.topbar {
+  background: #003366;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.brand .logo {
+  background: #fff;
+  color: #003366;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  color: #003366;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin: 12px 0 6px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input:focus {
+  border-color: #003366;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background: #003366;
+  color: #fff;
+  border: none;
+}
+.btn.primary:hover {
+  background: #002244;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #003366;
+  color: #003366;
+}
+.btn.ghost:hover {
+  background: #003366;
+  color: #fff;
+}
+
+.mt {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#login-msg, #signup-msg {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #7d1e22;
+  text-align: center;
+}
+
+.account-text {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 8px; 
+  margin-top: 12px;
+}
+
+.account-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ==========================================================================
+/* 3. STYLES FOR PURCHASE PAGE */ 
+main.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+body#page-purchase .card {
+  max-width: 1200px;
+  width: 95%;
+  margin: 30px auto;
+  border-radius: 12px;
+  padding: 32px;
+  background: #ffff;  
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 45px;
+  font-weight: bolder;
+  color: #003366;
+  margin-bottom: 25px;
+}
+
+#form-purchase {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-group label {
+  text-align: right;
+  font-weight: 500;
+  font-size: 15px;
+  color: #003366;
+}
+
+.form-group .input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccd4e0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group .input:focus {
+  outline: none;
+  border-color: #3399ff;
+  box-shadow: 0 0 0 2px rgba(51,153,255,0.2);
+}
+
+body#page-purchase .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+body#page-purchase #purchase-msg {
+  margin-bottom: 18px;
+  padding: 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  display: none;
+}
+
+body#page-purchase #purchase-msg.success {
+  background: #e6f9ec;
+  color: #207d38;
+  border: 1px solid #b7e2c4;
+}
+
+body#page-purchase #purchase-msg.error {
+  background: #fceaea;
+  color: #a94442;
+  border: 1px solid #f5c2c2;
+}
+
+body#page-purchase .mt {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Purchase / Form Messages */
+.error {
+  color: #b91c1c; 
+  background-color: #fee2e2; 
+  padding: 8px 12px;
+  border: 1px solid #f87171;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.success {
+  color: #166534; 
+  background-color: #dcfce7;
+  padding: 8px 12px;
+  border: 1px solid #86efac;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.note {
+  color: #1e40af; 
+  background-color: #dbeafe;
+  padding: 8px 12px;
+  border: 1px solid #93c5fd;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+4. STYLES FOR CHECKOUT PAGE */
+body#page-checkout .card {
+  max-width: 700px;
+  width: 95%;
+  margin: 30px auto;
+  border-radius: 12px;
+  padding: 32px;
+  background: ffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+body#page-checkout .input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccd4e0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+body#page-checkout .input:focus {
+  outline: none;
+  border-color: #3399ff;
+  box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+}
+
+body#page-checkout .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  min-width: 160px;  
+  height: 45px;  
+}
+
+body#page-checkout .mt label {
+    text-align: center;  
+    display: block;
+    width: 100%;  
+    margin-bottom: 5px;  
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #3399ff, #007bff);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+.btn.primary:hover {
+  background: linear-gradient(135deg, #5894d4, #35489b);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #f1f3f6;
+  color: #333;
+  border: 1px solid #ccd4e0;
+}
+.btn.secondary:hover {
+  background: #e0e5eb;
+}
+
+.mt {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.back-btn {
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: 500;
+}
+.back-btn:hover {
+  color: #495057;
+}

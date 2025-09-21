@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" id="page-signup">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Kat's Insurance</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="page-signup">
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">KI</div>
+        <span>Kat's Insurance</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar with back button -->
+  <header class="container navbar">
+    <span id="nav-back"></span>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <span id="nav-auth"></span>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="card">
+      <h2>Sign Up</h2>
+      <div id="signup-msg"></div>
+      <!-- Signup Form -->
+      <div class="form">
+        <label for="su-name">Full Name</label>
+        <input type="text" id="su-name" class="input" placeholder="Enter your full name">
+
+        <label for="su-email">Email</label>
+        <input type="email" id="su-email" class="input" placeholder="Enter your email">
+
+        <label for="su-phone">Phone</label>
+        <input type="tel" id="su-phone" class="input" placeholder="08xxxxxxxxxx">
+
+        <label for="su-pass">Password</label>
+        <input type="password" id="su-pass" class="input" placeholder="Enter password">
+
+        <label for="su-pass2">Confirm Password</label>
+        <input type="password" id="su-pass2" class="input" placeholder="Confirm password">
+
+        <button id="btn-signup" class="btn primary mt">Sign Up</button>
+
+        <div class="account-text">
+            <p>Already have an account?</p> <a href="login.html"><strong>Login Here</strong></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

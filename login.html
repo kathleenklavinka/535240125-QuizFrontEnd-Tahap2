@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — Kat's Insurance</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body id="page-login">
+  <div class="topbar">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">KI</div>
+        <div class="brand-title">Kat's Insurance</div>
+      </div>
+    </div>
+  </div>
+
+  <header class="container navbar">
+    <span id="nav-back"></span>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <span id="nav-auth"></span>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" style="max-width:500px;margin:30px auto;">
+      <h2>Login</h2>
+      <div id="login-msg"></div>
+
+      <div class="form">
+        <label for="login-email">Email</label>
+        <input id="login-email" class="input" type="email" placeholder="Enter your email">
+
+        <label for="login-pass">Password</label>
+        <input id="login-pass" class="input" type="password" placeholder="Enter your password">
+
+        <div class="mt">
+          <button class="btn primary" id="btn-login">Login</button>
+          <a href="signup.html" class="btn ghost">Sign Up</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

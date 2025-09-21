@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kat's Insurance — Home</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body id="page-index">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">KI</div>
+        <div>
+          <div class="brand-title">Kat's Insurance</div>
+          <div class="brand-subtitle">Fast & Simple Protection</div>
+        </div>
+      </div>
+
+      <div class="topbar-contact">
+        <span class="phone-icon">📞</span>
+        <a href="tel:+1-555-123-4567">
+          <span>Need Help?</span>
+          <strong>(021) 1608-2006</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="container navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <nav>
+      <a href="#products" class="nav-link">Products</a>
+      <a href="history.html" class="nav-link">History</a>
+      <a href="checkout.html" class="nav-link">Checkout</a>
+      <span id="nav-auth"></span>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Secure Your Future Today</h1>
+      <p>Compare insurance products, check details, and purchase online.</p>
+      <div class="searchbar">
+        <input id="search-input" placeholder="Search products...">
+        <button id="search-btn">Search</button>
+      </div>
+    </div>
+
+    <!-- Hero Slider for Images -->
+    <div class="hero-slider">
+      <button class="slider-btn prev">&#10094;</button>
+      <div class="slider-wrapper">
+        <img src="pics/slide1.jpg" class="slide active" alt="Slide 1">
+        <img src="pics/slide2.jpg" class="slide" alt="Slide 2">
+        <img src="pics/slide3.jpg" class="slide" alt="Slide 3">
+      </div>
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <main class="container">
+    <section id="products" class="section">
+      <div class="title">
+        <h1>Our Products</h1>
+        <p class="small">Choose your category to see details and purchase</p>
+      </div>
+      <div class="grid" id="product-grid">
+        <div class="card">
+          <img src="/pics/car.jpg" alt="Car Insurance">
+          <h3>Car Insurance</h3>
+          <p class="helper">Protect your vehicle from accidents and theft.</p>
+          <a href="detail.html?product=car1" class="btn primary mt">See Details</a>
+        </div>
+        <div class="card">
+          <img src="/pics/health.jpg" alt="Health Insurance">
+          <h3>Health Insurance</h3>
+          <p class="helper">Coverage for medical expenses and emergencies.</p>
+          <a href="detail.html?product=health1" class="btn primary mt">See Details</a>
+        </div>
+        <div class="card">
+          <img src="/pics/life.jpg" alt="Life Insurance">
+          <h3>Life Insurance</h3>
+          <p class="helper">Secure your family's future with life protection.</p>
+          <a href="detail.html?product=life1" class="btn primary mt">See Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="container">
+        <div class="stat">
+          <h3>1000+</h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="stat">
+          <h3>15+</h3>
+          <p>Insurance Products</p>
+        </div>
+        <div class="stat">
+          <h3>10 Years</h3>
+          <p>Trusted Service</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- About Us / Why Choose -->
+  <section id="about" class="container">
+    <div class="title">
+      <h2>Why Choose Kat's Insurance?</h2>
+      <p class="small">Trusted by thousands, delivering protection with care.</p>
+    </div>
+    <div class="features">
+      <img src="pics/trusted.jpg" alt="Trusted Insurance">
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="badge">✅</div>
+          <div>
+            <h4>Reliable Protection</h4>
+            <p>Comprehensive coverage tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <!-- Using emoji for the badge logo each section -->
+          <div class="badge">⚡</div>
+          <div>
+            <h4>Fast Process</h4>
+            <p>Quick and hassle-free policy approval.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="badge">💰</div>
+          <div>
+            <h4>Affordable Plans</h4>
+            <p>Choose packages that fit your budget perfectly.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="badge">🤝</div>
+          <div>
+            <h4>Trusted Support</h4>
+            <p>Our team is ready to help you anytime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <!-- Bagian Kiri: Links -->
+      <div class="footer-links">
+        <h3>Kat's Insurance</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Claims Center</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-newsletter">
+        <h4>Stay Protected</h4>
+        <p>Get updates on policy changes, tips, and exclusive offers.</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your email here" required>
+          <button class="btn primary" type="submit">Subscribe</button>
+          <label class="newsletter-check">
+            <input type="checkbox" required>
+            I agree to receive communications from Kat's Insurance.
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <a href="#">Terms & Conditions</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Accessibility</a>
+        <p>© 2025 Kat's Insurance. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
